@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimsum Narawi - Kehangatan Otentik dalam Setiap Gigitan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration & CSS Styling -->
+    <script>
+        tailwind.config = {
+            theme: {
+               extend: {
+                    colors: {
+                        brand: {
+                            darkred: '#7A0C0C',
+                            crimson: '#A91D22',
+                            red: '#C0392B',
+                            gold: '#D35400',
+                            amber: '#F39C12',
+                            cream: '#FDFBF7',
+                            creamdark: '#F5E6D3',
+                            accent: '#27AE60'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-cream text-gray-800 antialiased selection:bg-brand-crimson selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-creamdark/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="nav-sound flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-brand-crimson flex items-center justify-center text-brand-cream text-2xl font-bold shadow-md group-hover:scale-105 transition-transform duration-300 border-2 border-brand-amber">
+                        🥟
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-darkred block leading-none">Dimsum Narawi</span>
+                        <span class="text-[10px] tracking-widest text-brand-gold uppercase font-semibold">Kehangatan Otentik</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                    <a href="#home" class="nav-sound hover:text-brand-crimson transition-colors py-1 border-b-2 border-transparent hover:border-brand-crimson">Beranda</a>
+                <a href="#video-promosi" class="nav-sound hover:text-orange-600 transition">
+                    Video Promosi
+                </a>
+                    <a href="#menu" class="nav-sound hover:text-brand-crimson transition-colors py-1 border-b-2 border-transparent hover:border-brand-crimson">Menu Dimsum</a>
+                    <a href="#features" class="nav-sound hover:text-brand-crimson transition-colors py-1 border-b-2 border-transparent hover:border-brand-crimson">Keunggulan</a>
+                    <a href="#reviews" class="nav-sound hover:text-brand-crimson transition-colors py-1 border-b-2 border-transparent hover:border-brand-crimson">Ulasan</a>
+                <a href="#info" class="nav-sound hover:text-orange-600 transition">
+                    Info
+                </a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center gap-3">
+                    <!-- Search Toggle Mobile / Desktop Search trigger -->
+                    <a href="#menu" onclick="focusSearch()" class="nav-sound p-2 text-gray-600 hover:text-brand-crimson transition-colors rounded-full hover:bg-brand-creamdark/50" title="Cari Menu">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-pattern text-white py-16 lg:py-24">
+        <!-- Overlay Glows -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-amber/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-crimson/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-amber/20 border border-brand-amber/40 text-brand-amber text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-fire text-brand-amber"></i> Freshly Steamed & 100% Halal
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-brand-cream">
+                        Nikmati Kehangatan <span class="text-brand-amber italic">Dimsum Premium</span> Khas Narawi
+                    </h1>
+                    <p class="text-brand-cream/80 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Dibuat secara handmade dari daging ayam & udang segar pilihan, dibalut kulit tipis lembut, disajikan hangat dengan saus merah otentik yang bikin ketagihan!
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#menu" class="nav-sound w-full sm:w-auto px-8 py-4 bg-brand-amber hover:bg-brand-gold text-brand-darkred font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                            <span>Lihat Menu</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#features" class="nav-sound w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-2xl transition-all duration-300 text-center">
+                            Pelajari Keunggulan
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-amber">100%</p>
+                            <p class="text-xs text-brand-cream/70">Daging Fresh & Halal</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-amber">10+</p>
+                            <p class="text-xs text-brand-cream/70">Varian Vavorit</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-amber">4.9★</p>
+                            <p class="text-xs text-brand-cream/70">Ulasan Pelanggan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Column -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px]">
+                        <!-- Decorative Ring -->
+                        <div class="absolute inset-0 rounded-full border-4 border-dashed border-brand-amber/40 animate-[spin_40s_linear_infinite]"></div>
+                        
+                        <!-- Main Image Placeholder inside Steam Basket frame -->
+                        <div class="absolute inset-4 rounded-full overflow-hidden shadow-2xl border-8 border-brand-creamdark/30">
+                            <img src="images/All Dimsum.jpg" alt="Dimsum Narawi Hero" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700 dimsum-hover-sound">
+                        </div>
+
+                        <!-- Floating Badge 1 -->
+                        <div class="absolute top-4 -left-4 glass-card p-3 rounded-2xl shadow-xl flex items-center gap-3 text-gray-800">
+                            <div class="w-10 h-10 rounded-xl bg-brand-crimson text-white flex items-center justify-center font-bold">
+                                🌶️
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Saus Khas</p>
+                                <p class="text-xs font-bold text-brand-darkred">Pedas Gurih Mantap</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 -->
+                        <div class="absolute -bottom-2 -right-2 glass-card p-3.5 rounded-2xl shadow-xl flex items-center gap-3 text-gray-800">
+                            <div class="w-10 h-10 rounded-xl bg-brand-amber text-brand-darkred flex items-center justify-center font-bold text-lg">
+                                ♨️
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium">Dikukus Langsung</p>
+                                <p class="text-xs font-bold text-brand-darkred">Selalu Hangat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VIDEO PROMOSI ==================== -->
+    <section id="video-promosi" class="py-20 bg-orange-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-orange-600 font-semibold uppercase tracking-wider text-sm">
+                    Video Promosi
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
+                    Kenalan Lebih Dekat dengan Dimsum Narawi
+                </h2>
+                <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
+                    Lihat video promosi Dimsum Narawi dan nikmati kelezatan dalam setiap gigitan.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl bg-gray-900 aspect-video">
+                <video class="w-full h-full object-cover" controls preload="metadata">
+                    <source src="video-promosi-demo.mp4" type="video/mp4">
+                    Browser kamu tidak mendukung pemutaran video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features / Why Us Section -->
+    <section id="features" class="py-16 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-crimson font-bold text-sm uppercase tracking-wider">Mengapa Memilih Kami?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred mt-1">Keunggulan Dimsum Narawi</h2>
+                <div class="w-16 h-1 bg-brand-amber mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-card p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-300 border border-brand-creamdark">
+                    <div class="w-16 h-16 bg-brand-crimson/10 text-brand-crimson rounded-2xl flex items-center justify-center text-3xl mx-auto mb-5">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkred mb-2">100% Halal & Higienis</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Dibuat menggunakan bahan-bahan halal berkualitas tinggi dan proses produksi yang sangat higienis.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-300 border border-brand-creamdark">
+                    <div class="w-16 h-16 bg-brand-amber/20 text-brand-gold rounded-2xl flex items-center justify-center text-3xl mx-auto mb-5">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkred mb-2">Daging Padat & Fresh</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Komposisi isi olahan ayam & udang melimpah tanpa terasa tepung tebal. Terasa kenyal & juicy.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card p-8 rounded-3xl text-center hover:shadow-xl transition-all duration-300 border border-brand-creamdark">
+                    <div class="w-16 h-16 bg-brand-crimson/10 text-brand-crimson rounded-2xl flex items-center justify-center text-3xl mx-auto mb-5">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkred mb-2">Pengiriman Cepat</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Dikemas rapat dan siap dikirim via Grab/Gojek Instant agar sampai di tanganmu tetap hangat sempurna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / Product List Section -->
+    <section id="menu" class="py-16 bg-brand-creamdark/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <span class="text-brand-crimson font-bold text-sm uppercase tracking-wider">Pilih Favoritmu</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred mt-1">Daftar Menu Lezat</h2>
+                </div>
+
+                <!-- Search & Category Filters -->
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <!-- Search Bar -->
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="search-input" placeholder="Cari dimsum..." oninput="filterProducts()" 
+                            class="w-full pl-10 pr-4 py-2.5 rounded-2xl border border-brand-creamdark bg-white focus:outline-none focus:ring-2 focus:ring-brand-crimson text-sm shadow-sm">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-gray-400 text-sm"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Badges -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 custom-scrollbar">
+                <button onclick="setCategory('all')" class="category-btn active px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-brand-crimson text-white whitespace-nowrap" data-category="all">Semua Menu</button>
+                <button onclick="setCategory('kukus')" class="category-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-brand-creamdark border border-brand-creamdark whitespace-nowrap" data-category="kukus">🥟 Dimsum Kukus</button>
+                <button onclick="setCategory('goreng')" class="category-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-brand-creamdark border border-brand-creamdark whitespace-nowrap" data-category="goreng">🍤 Dimsum Goreng</button>
+                <button onclick="setCategory('paket')" class="category-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-brand-creamdark border border-brand-creamdark whitespace-nowrap" data-category="paket">📦 Paket Hemat</button>
+                <button onclick="setCategory('saus')" class="category-btn px-5 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-gray-700 hover:bg-brand-creamdark border border-brand-creamdark whitespace-nowrap" data-category="saus">🌶️ Saus & Pelengkap</button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Products will be dynamically loaded via JS -->
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="empty-state" class="hidden text-center py-16">
+                <div class="text-5xl mb-4">🔍</div>
+                <h3 class="text-lg font-bold text-brand-darkred">Menu Tidak Ditemukan</h3>
+                <p class="text-gray-500 text-sm mt-1">Coba kata kunci pencarian atau kategori lain.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Testimonials -->
+    <section id="reviews" class="py-16 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-crimson font-bold text-sm uppercase tracking-wider">Kata Mereka</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-darkred mt-1">Ulasan Pelanggan Setia</h2>
+                <div class="w-16 h-1 bg-brand-amber mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <div class="flex items-center gap-1 text-brand-amber mb-3 text-sm">
+                    </div>
+                    <p class="text-gray-700 text-sm italic mb-4">"Dimsum Mentainya gokil banget! Dagingnya kerasa banget bukan tepung, saus mentainya gurih kebul-kebul. Langganan terus!"</p>
+                    <div class="flex items-center gap-3 border-t border-brand-creamdark/60 pt-3">
+                        <div class="w-9 h-9 rounded-full bg-brand-crimson text-white font-bold flex items-center justify-center text-xs">A</div>
+                        <div>
+                            <p class="font-bold text-xs text-brand-darkred">Anisa Rahma</p>
+                            <p class="text-[10px] text-gray-500">Jakarta Selatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <div class="flex items-center gap-1 text-brand-amber mb-3 text-sm">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-700 text-sm italic mb-4">"Pengiriman instant cepet banget, nyampe masih anget. Hakau udangnya transparan dan udangnya utuh kenyal! Recomended!"</p>
+                    <div class="flex items-center gap-3 border-t border-brand-creamdark/60 pt-3">
+                        <div class="w-9 h-9 rounded-full bg-brand-amber text-brand-darkred font-bold flex items-center justify-center text-xs">B</div>
+                        <div>
+                            <p class="font-bold text-xs text-brand-darkred">Budi Santoso</p>
+                            <p class="text-[10px] text-gray-500">Tangerang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-6 rounded-3xl relative">
+                    <div class="flex items-center gap-1 text-brand-amber mb-3 text-sm">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-700 text-sm italic mb-4">"Paket Mix Narawi pas banget buat acara kumpul keluarga. Isinya lengkap, saus merahnya pedas asin gurih pas!"</p>
+                    <div class="flex items-center gap-3 border-t border-brand-creamdark/60 pt-3">
+                        <div class="w-9 h-9 rounded-full bg-brand-darkred text-white font-bold flex items-center justify-center text-xs">S</div>
+                        <div>
+                            <p class="font-bold text-xs text-brand-darkred">Siti Nurhaliza</p>
+                            <p class="text-[10px] text-gray-500">Depok</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darkred text-white py-12 border-t-4 border-brand-amber" id="info">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-3xl">🥟</span>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-brand-cream">Dimsum Narawi</span>
+                    </div>
+                    <p class="text-brand-cream/70 text-xs leading-relaxed">
+                        Sajian Dimsum otentik handmade dengan bahan baku segar, halal, dan penuh cita rasa untuk kehangatan keluarga Anda.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-brand-amber mb-3">Jam Operasional</h4>
+                    <p class="text-xs text-brand-cream/80">Senin - Minggu</p>
+                    <p class="text-xs font-semibold text-white">09:00 - 21:00 WIB</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-brand-amber mb-3">Kontak & Lokasi</h4>
+                    <p class="text-xs text-brand-cream/80 mb-1"><i class="fa-solid fa-location-dot text-brand-amber mr-2"></i> Jl. Narawi Dimsum No. 88, Jakarta</p>
+                    <p class="text-xs text-brand-cream/80"><i class="fa-solid fa-phone text-brand-amber mr-2"></i> +62 812-3456-7890</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-brand-amber mb-3">Ikuti Kami</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-crimson flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-crimson flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-crimson flex items-center justify-center text-sm transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 text-center text-xs text-brand-cream/60">
+                &copy; 2026 Dimsum Narawi. All Rights Reserved. Created for best culinary experience.
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Application Logic -->
+    
+
+
+    <!-- ==================== SOUND EFFECTS ==================== -->
+    <audio id="clickSound" preload="auto">
+        <source src="sounds/navbar.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="hoverSound" preload="auto">
+        <source src="sounds/hover.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="dimsumSound" preload="auto">
+        <source src="sounds/dimsum.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/script.js"></script>
+</body>
+</html>
